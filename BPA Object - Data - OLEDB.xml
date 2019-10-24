@@ -1,0 +1,683 @@
+﻿<process name="Data - OLEDB" version="6.3.0.6190" bpversion="5.0.23.0" narrative="A SQL interface for interacting with OLEDB data sources" type="object" runmode="Background" preferredid="9fc19dda-3610-454f-8713-a55af212d309">
+  <appdef>
+    <element name="Application Root">
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <id>ed09581b-7493-46ed-8dfa-8f00d46356b0</id>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom>1</zoom>
+  </view>
+  <preconditions>
+    <condition narrative="" />
+    <condition narrative="" />
+    <condition narrative="" />
+  </preconditions>
+  <endpoint narrative="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+  <subsheet subsheetid="cfb6da91-518b-40a3-8e0e-115ff0252ea7" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>-161</camerax>
+      <cameray>0</cameray>
+      <zoom>1</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="90429413-7792-4513-8bc0-d6d079aa08b9" type="Normal" published="True">
+    <name>Set Connection</name>
+    <view>
+      <camerax>20</camerax>
+      <cameray>63</cameray>
+      <zoom>1</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="459569f2-c792-4948-8884-5c2a0917cc16" type="Normal" published="True">
+    <name>Open</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom>1</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="7ee7ad42-e017-40ff-92aa-3cfc5c6dd0e5" type="Normal" published="True">
+    <name>Close</name>
+    <view>
+      <camerax>86</camerax>
+      <cameray>0</cameray>
+      <zoom>1</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="780529b8-393d-4d1d-bc5f-34f383fe53ec" type="Normal" published="True">
+    <name>Get Collection</name>
+    <view>
+      <camerax>-42</camerax>
+      <cameray>-21</cameray>
+      <zoom>1</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="9ad00c3c-8615-4f62-9595-9081a2523133" type="Normal" published="True">
+    <name>Execute</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom>1</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="f3bf5e12-d2cf-4c5d-bda5-0deae3c26316" name="Start" type="Start">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>d16cc64f-d5d1-4aaf-bea5-f814e1f2657b</onsuccess>
+  </stage>
+  <stage stageid="d16cc64f-d5d1-4aaf-bea5-f814e1f2657b" name="End" type="End">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="0efcc61e-6916-4463-ae94-c24edb2adc75" name="Stage1" type="ProcessInfo">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <references>
+      <reference>System.Data.dll</reference>
+      <reference>System.XML.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Data</import>
+      <import>System.Data.OLEDB</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[
+
+]]></globalcode>
+    <code><![CDATA[Private moConnection As OLEDBConnection]]></code>
+  </stage>
+  <stage stageid="fd95e8ae-614b-4bae-a0f9-cbd04cef37ce" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>cfb6da91-518b-40a3-8e0e-115ff0252ea7</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="e91da0c2-e60f-4eae-a108-bd99aaff046f" name="Start" type="Start">
+    <subsheetid>cfb6da91-518b-40a3-8e0e-115ff0252ea7</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>88b89098-8bb2-42fc-8e43-bad5b1e4f400</onsuccess>
+  </stage>
+  <stage stageid="91836284-14a0-4c0f-b9d5-8cd74b4d1632" name="End" type="End">
+    <subsheetid>cfb6da91-518b-40a3-8e0e-115ff0252ea7</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="cf7a7a0d-0c2b-4a9e-8a52-19bdf46ef4cc" name="Set Connection" type="SubSheetInfo">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>Sets the connection details for the database.</narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="5395eb12-61a3-4005-88a3-ceda307cf9b1" name="Start" type="Start">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <preconditions>
+      <condition narrative="" />
+    </preconditions>
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Database" narrative="Optional. The path to the oledb database file" stage="Database" />
+      <input type="password" name="Password" narrative="Optional. The password if required to open the oledb database." stage="Password" />
+      <input type="text" name="Provider" narrative="Optional. Allows the database provider to be overridden." stage="Provider" />
+      <input type="text" name="Connection String" narrative="Optional. Allows the full connection string to be provided. If supplying this parameter no other parameters are required." stage="Connection String" />
+    </inputs>
+    <onsuccess>935af892-73c5-4d1a-871f-536b70e44a8f</onsuccess>
+  </stage>
+  <stage stageid="823a5018-5ad8-483c-a6c1-8c527bf7bc00" name="End" type="End">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>210</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="78309214-2fb3-4bd9-8433-ca0f0fc31bd4" name="new" type="Note">
+    <subsheetid>cfb6da91-518b-40a3-8e0e-115ff0252ea7</subsheetid>
+    <loginhibit />
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically by Automate immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="7bb7dcd7-acf2-4a7a-a96d-756830b2e54f" name="new" type="Note">
+    <loginhibit />
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically by Automate immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="b9720411-39cf-4e79-8fe9-af8e7581970a" name="Database" type="Data">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+  </stage>
+  <stage stageid="d1d97b89-18c2-40ab-8f43-0cd0ce45f5b7" name="User" type="Data">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+  </stage>
+  <stage stageid="1c8bc019-fa8a-4593-b435-81216f908452" name="Password" type="Data">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>password</datatype>
+    <initialvalueenc>
+    </initialvalueenc>
+  </stage>
+  <stage stageid="c9568fbf-1fca-4ce7-aa27-2309731df7f5" name="Connection String" type="Data">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>75</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+  </stage>
+  <stage stageid="db11541e-1f1d-48f5-a64e-e1d44d23ecf6" name="Set connection" type="Calculation">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>823a5018-5ad8-483c-a6c1-8c527bf7bc00</onsuccess>
+    <calculation expression="&quot;Provider=&quot; &amp; [Provider] &amp; &quot;; Data Source=&quot; &amp; [Database] &amp; &quot;; Jet OLEDB:Database Password=&quot; &amp; [Password] &amp;&quot;;&quot;" stage="Connection String" />
+  </stage>
+  <stage stageid="8ed153e9-383f-4acf-9e86-3d058f27a895" name="Open" type="SubSheetInfo">
+    <subsheetid>459569f2-c792-4948-8884-5c2a0917cc16</subsheetid>
+    <loginhibit />
+    <narrative>Opens a connection to the OLEDB database.</narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="3c501978-f53e-419d-ab66-c3cbef5cf598" name="Start" type="Start">
+    <subsheetid>459569f2-c792-4948-8884-5c2a0917cc16</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>c57babb2-f4b2-42dd-95c7-a8155b854975</onsuccess>
+  </stage>
+  <stage stageid="7295054b-4d97-4891-ab69-23416df80d09" name="End" type="End">
+    <subsheetid>459569f2-c792-4948-8884-5c2a0917cc16</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="c57babb2-f4b2-42dd-95c7-a8155b854975" name="Open" type="Code">
+    <subsheetid>459569f2-c792-4948-8884-5c2a0917cc16</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="ConnectionString" expr="[Connection String]" />
+    </inputs>
+    <onsuccess>7295054b-4d97-4891-ab69-23416df80d09</onsuccess>
+    <code><![CDATA[If moConnection Is Nothing Then
+	moConnection = New OLEDBConnection(ConnectionString)
+	moConnection.Open()
+End If]]></code>
+  </stage>
+  <stage stageid="22e10c68-07d1-4cc4-9072-7c9b0b0c97cf" name="SQL" type="Data">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>120</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+  </stage>
+  <stage stageid="4a78a3ea-35e5-4496-bfe0-509900dc5137" name="Close" type="SubSheetInfo">
+    <subsheetid>7ee7ad42-e017-40ff-92aa-3cfc5c6dd0e5</subsheetid>
+    <loginhibit />
+    <narrative>Closes the connection to the OLEDB database.</narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="6bd7feeb-d610-4f7b-9646-df99afade77a" name="Start" type="Start">
+    <subsheetid>7ee7ad42-e017-40ff-92aa-3cfc5c6dd0e5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>f5aab680-3f4a-4cb2-9873-7c2aa718133f</onsuccess>
+  </stage>
+  <stage stageid="b9924b3b-5eea-41f5-9d73-8f4624ba22fe" name="End" type="End">
+    <subsheetid>7ee7ad42-e017-40ff-92aa-3cfc5c6dd0e5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="f5aab680-3f4a-4cb2-9873-7c2aa718133f" name="Close" type="Code">
+    <subsheetid>7ee7ad42-e017-40ff-92aa-3cfc5c6dd0e5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>0</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>b9924b3b-5eea-41f5-9d73-8f4624ba22fe</onsuccess>
+    <code><![CDATA[moConnection.Close()
+moConnection.Dispose()
+moConnection = Nothing]]></code>
+  </stage>
+  <stage stageid="88b89098-8bb2-42fc-8e43-bad5b1e4f400" name="Close" type="SubSheet">
+    <subsheetid>cfb6da91-518b-40a3-8e0e-115ff0252ea7</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>91836284-14a0-4c0f-b9d5-8cd74b4d1632</onsuccess>
+    <processid>7ee7ad42-e017-40ff-92aa-3cfc5c6dd0e5</processid>
+  </stage>
+  <stage stageid="221cc4f2-f3b6-4a62-985a-350066ad7c79" name="Get Collection" type="SubSheetInfo">
+    <subsheetid>780529b8-393d-4d1d-bc5f-34f383fe53ec</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="76ba8075-200c-47f3-a5b0-81d2a545b93b" name="Start" type="Start">
+    <subsheetid>780529b8-393d-4d1d-bc5f-34f383fe53ec</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="SQL" narrative="An SQL query to fetch the data. In most cases this will be a 'select' query." stage="SQL" />
+    </inputs>
+    <onsuccess>98267e1e-20b7-4ce9-a0b8-847c18c1976f</onsuccess>
+  </stage>
+  <stage stageid="469b68e3-523f-4723-ab11-b47348bbdf33" name="End" type="End">
+    <subsheetid>780529b8-393d-4d1d-bc5f-34f383fe53ec</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="collection" name="Results" stage="Results" />
+    </outputs>
+  </stage>
+  <stage stageid="897f736f-bc15-4938-9d97-b4c1065dd5e1" name="Get Data Table" type="Code">
+    <subsheetid>780529b8-393d-4d1d-bc5f-34f383fe53ec</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="SQL" expr="[SQL]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Results" stage="Results" />
+    </outputs>
+    <onsuccess>469b68e3-523f-4723-ab11-b47348bbdf33</onsuccess>
+    <code><![CDATA[Dim oDataAdapter As New OLEDBDataAdapter(SQL,moConnection)
+
+Dim oDataSet As New DataSet		
+oDataAdapter.Fill(oDataset)
+
+Results = oDataSet.Tables(0)]]></code>
+  </stage>
+  <stage stageid="98267e1e-20b7-4ce9-a0b8-847c18c1976f" name="Open" type="SubSheet">
+    <subsheetid>780529b8-393d-4d1d-bc5f-34f383fe53ec</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>897f736f-bc15-4938-9d97-b4c1065dd5e1</onsuccess>
+    <processid>459569f2-c792-4948-8884-5c2a0917cc16</processid>
+  </stage>
+  <stage stageid="71604ec6-dbf3-40c1-b400-8a5eea8eda3f" name="Results" type="Collection">
+    <subsheetid>780529b8-393d-4d1d-bc5f-34f383fe53ec</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3f4ca0da-93ad-492e-af65-ff637c54b37a" name="Password Set?" type="Decision">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>If the password is set use password in connection string.</narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <decision expression="[PasswordText]&lt;&gt;&quot;&quot;" />
+    <ontrue>db11541e-1f1d-48f5-a64e-e1d44d23ecf6</ontrue>
+    <onfalse>fbf4d6d4-763b-41f2-926a-ce6745964763</onfalse>
+  </stage>
+  <stage stageid="fbf4d6d4-763b-41f2-926a-ce6745964763" name="Set connection" type="Calculation">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>823a5018-5ad8-483c-a6c1-8c527bf7bc00</onsuccess>
+    <calculation expression="&quot;Provider=&quot; &amp; [Provider] &amp; &quot;; Data Source=&quot; &amp; [Database] &amp; &quot;;&quot;" stage="Connection String" />
+  </stage>
+  <stage stageid="b0dbeba0-75c2-479b-9d5d-bde261b4db20" name="Provider" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>165</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="16cd8677-ab9b-4269-9a0b-1e4956f4d103" name="Provider Set?" type="Decision">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <decision expression="[Provider]&lt;&gt;&quot;&quot;" />
+    <ontrue>35e769d9-71b0-43da-8bda-6e4cbd3d0e55</ontrue>
+    <onfalse>8b21c0e2-f0c8-4c89-8636-f648382b8c37</onfalse>
+  </stage>
+  <stage stageid="8b21c0e2-f0c8-4c89-8636-f648382b8c37" name="Set Provider" type="Calculation">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>120</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>4eb62611-4eee-4ad8-9ffd-bf789ac796ad</onsuccess>
+    <calculation expression="&quot;Microsoft.Jet.OLEDB.4.0&quot;" stage="Provider" />
+  </stage>
+  <stage stageid="4eb62611-4eee-4ad8-9ffd-bf789ac796ad" name="anchor1" type="Anchor">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>120</displayx>
+    <displayy>45</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>35e769d9-71b0-43da-8bda-6e4cbd3d0e55</onsuccess>
+  </stage>
+  <stage stageid="35e769d9-71b0-43da-8bda-6e4cbd3d0e55" name="Get Password Text" type="Calculation">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <onsuccess>3f4ca0da-93ad-492e-af65-ff637c54b37a</onsuccess>
+    <calculation expression="[Password]" stage="PasswordText" />
+  </stage>
+  <stage stageid="8cc8ad2a-2fa6-41ee-abc4-def727b8035c" name="PasswordText" type="Data">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-60</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Tahoma" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="935af892-73c5-4d1a-871f-536b70e44a8f" name="Connection String Provided" type="Decision">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="Len([Connection String])&gt;0" />
+    <ontrue>59f15fcb-a597-4b07-9bf2-27c46f27b6c6</ontrue>
+    <onfalse>16cd8677-ab9b-4269-9a0b-1e4956f4d103</onfalse>
+  </stage>
+  <stage stageid="59f15fcb-a597-4b07-9bf2-27c46f27b6c6" name="End1" type="End">
+    <subsheetid>90429413-7792-4513-8bc0-d6d079aa08b9</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="867d0e4f-77f9-4ce5-98fe-24936bd70fef" name="Execute" type="SubSheetInfo">
+    <subsheetid>9ad00c3c-8615-4f62-9595-9081a2523133</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="f3759797-b7e7-4c69-abe5-9eef2b589950" name="Start" type="Start">
+    <subsheetid>9ad00c3c-8615-4f62-9595-9081a2523133</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="SQL" stage="SQL" />
+    </inputs>
+    <onsuccess>e5eaf88d-54e6-4dc2-a219-327908c231f1</onsuccess>
+  </stage>
+  <stage stageid="39a5fcd1-fd83-4b7b-a7c1-988b88708eb6" name="End" type="End">
+    <subsheetid>9ad00c3c-8615-4f62-9595-9081a2523133</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="e5eaf88d-54e6-4dc2-a219-327908c231f1" name="Execute" type="Code">
+    <subsheetid>9ad00c3c-8615-4f62-9595-9081a2523133</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="SQL" expr="[SQL]" />
+    </inputs>
+    <onsuccess>39a5fcd1-fd83-4b7b-a7c1-988b88708eb6</onsuccess>
+    <code><![CDATA[Dim oCommand As New OleDbCommand(SQL,moConnection)
+oCommand.ExecuteNonQuery()
+]]></code>
+  </stage>
+</process>
